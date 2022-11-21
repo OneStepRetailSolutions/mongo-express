@@ -3,7 +3,13 @@ version: "3.5"
 services:
   mongo-express:
           env_file: ../config/.dockerenv
-          dockerfile: ../config/Dockerfile
+          ports:
+                  - "127.0.0.1:${MONGOexpressPort}:8081"
+
+mongo-express:
+        build: 
+          env_file: ../config/.dockerenv
+          dockerfile: ./Dockerfile
           args:
                 ME_CONFIG_MONGODB_URL: ${ME_CONFIG_MONGODB_URL}
                 ME_CONFIG_MONGODB_ENABLE_ADMIN: ${ME_CONFIG_MONGODB_ENABLE_ADMIN}
@@ -14,5 +20,3 @@ services:
                 ME_CONFIG_BASICAUTH_USERNAME: ${ME_CONFIG_BASICAUTH_USERNAME}
                 ME_CONFIG_BASICAUTH_PASSWORD: ${ME_CONFIG_BASICAUTH_PASSWORD}
                 MONGOexpressPort: ${MONGOexpressPort}
-          ports:
-                  - "127.0.0.1:${MONGOexpressPort}:8081"
