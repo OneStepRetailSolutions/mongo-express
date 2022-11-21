@@ -5,9 +5,10 @@ services:
           env_file: ../config/.dockerenv
           ports:
                   - "127.0.0.1:${MONGOexpressPort}:8081"
-          build: ./
-                dockerfile: ./Dockerfile
-                args:
+          build:
+                  context: ./
+                  dockerfile: ./Dockerfile
+                  args:
                         ME_CONFIG_MONGODB_URL: ${ME_CONFIG_MONGODB_URL}
                         ME_CONFIG_MONGODB_ENABLE_ADMIN: ${ME_CONFIG_MONGODB_ENABLE_ADMIN}
                         ME_CONFIG_MONGODB_SSL: ${ME_CONFIG_MONGODB_SSL}
