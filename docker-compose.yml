@@ -18,5 +18,5 @@ services:
                         ME_CONFIG_BASICAUTH: $${ME_CONFIG_BASICAUTH}
                         ME_CONFIG_BASICAUTH_USERNAME: $${ME_CONFIG_BASICAUTH_USERNAME}
                         ME_CONFIG_BASICAUTH_PASSWORD: $${ME_CONFIG_BASICAUTH_PASSWORD}
-                        MONGOexpressPort: $${MONGOexpressPort}
                         MONGODBName: $${MONGODBName}
+                        MONGOexpressPort: $${MONGOexpressPort}
