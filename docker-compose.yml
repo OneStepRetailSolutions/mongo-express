@@ -10,13 +10,13 @@ services:
                   context: ./
                   dockerfile: ./Dockerfile
                   args:
-                        ME_CONFIG_MONGODB_URL: ${ME_CONFIG_MONGODB_URL}
-                        ME_CONFIG_MONGODB_ENABLE_ADMIN: ${ME_CONFIG_MONGODB_ENABLE_ADMIN}
-                        ME_CONFIG_MONGODB_SSL: ${ME_CONFIG_MONGODB_SSL}
-                        ME_CONFIG_SITE_COOKIESECRET: ${ME_CONFIG_SITE_COOKIESECRET}
-                        ME_CONFIG_SITE_SESSIONSECRET: ${ME_CONFIG_SITE_SESSIONSECRET}
-                        ME_CONFIG_BASICAUTH: ${ME_CONFIG_BASICAUTH}
-                        ME_CONFIG_BASICAUTH_USERNAME: ${ME_CONFIG_BASICAUTH_USERNAME}
-                        ME_CONFIG_BASICAUTH_PASSWORD: ${ME_CONFIG_BASICAUTH_PASSWORD}
-                        MONGOexpressPort: ${MONGOexpressPort}
-                        MONGODBName: ${MONGODBName}
+                        ME_CONFIG_MONGODB_URL: $${ME_CONFIG_MONGODB_URL}
+                        ME_CONFIG_MONGODB_ENABLE_ADMIN: $${ME_CONFIG_MONGODB_ENABLE_ADMIN}
+                        ME_CONFIG_MONGODB_SSL: $${ME_CONFIG_MONGODB_SSL}
+                        ME_CONFIG_SITE_COOKIESECRET: $${ME_CONFIG_SITE_COOKIESECRET}
+                        ME_CONFIG_SITE_SESSIONSECRET: $${ME_CONFIG_SITE_SESSIONSECRET}
+                        ME_CONFIG_BASICAUTH: $${ME_CONFIG_BASICAUTH}
+                        ME_CONFIG_BASICAUTH_USERNAME: $${ME_CONFIG_BASICAUTH_USERNAME}
+                        ME_CONFIG_BASICAUTH_PASSWORD: $${ME_CONFIG_BASICAUTH_PASSWORD}
+                        MONGOexpressPort: $${MONGOexpressPort}
+                        MONGODBName: $${MONGODBName}
