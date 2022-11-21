@@ -3,7 +3,7 @@ version: "3.5"
 services:
   mongo-express:
           env_file: ../config/.dockerenv
-          image: $${MONGODBName}_mongo-express
+          image: ${MONGODBName}_mongo-express
           ports:
                   - "127.0.0.1:${MONGOexpressPort}:8081"
           build:
