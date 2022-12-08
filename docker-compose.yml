@@ -6,11 +6,12 @@ services:
           image: "${MONGODBName_lower}"
           ports:
                   - "127.0.0.1:${MONGOexpressPort}:8081"
-          restart_policy: 
-                  condition: on-failure 
-                  delay: 10s 
-                  max_attempts: 2 
-                  window: 60s
+          deploy:
+                  restart_policy: 
+                        condition: on-failure 
+                        delay: 10s 
+                        max_attempts: 2 
+                        window: 60s
           build:
                   context: ./
                   dockerfile: ./Dockerfile
