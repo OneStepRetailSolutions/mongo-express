@@ -2,16 +2,11 @@ version: "3.5"
 
 services:
   mongo-express:
-          env_file: ../config/.dockerenv
+          env_file: .dockerenv
           image: "${MONGODBName_lower}"
           ports:
                   - "127.0.0.1:${MONGOexpressPort}:8081"
-          deploy:
-                  restart_policy: 
-                        condition: on-failure 
-                        delay: 10s 
-                        max_attempts: 2 
-                        window: 60s
+          restart: on-failure
           build:
                   context: ./
                   dockerfile: ./Dockerfile
